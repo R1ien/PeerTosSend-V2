@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recevoir un fichier - PeerToSend</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #helpText {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📥 Recevoir un fichier</h1>
+    <div class="card">
+      <label for="codeInput">Entre le code à 6 chiffres :</label>
+      <input type="text" id="codeInput" maxlength="6" placeholder="Ex : 123456">
+      <button id="joinBtn">Demander le fichier</button>
+
+      <p id="receiverStatus" class="muted">Statut : inactif</p>
+      <div id="downloadArea"></div>
+    </div>
+
+    <p id="helpText">💡 Si le téléchargement ne démarre pas après avoir cliqué sur <b>“Télécharger”</b>, reclique sur <b>“Demander un fichier”</b> pour le lancer.</p>
+
+    <p><a href="index.html" class="muted">⬅ Retour à l'accueil</a></p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script_receive.js"></script>
+</body>
+</html>
